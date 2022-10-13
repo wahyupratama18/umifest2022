@@ -1,0 +1,67 @@
+    /* about section */
+    .about {
+        background: #fff;
+        box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
+      }
+      
+      /* skills section */
+      .skills {
+        background: #3366CC;
+        color: #f5f5f5;
+      }
+      .progress {
+        margin-top: 10px;
+        border-radius: 0px;
+        height: 4px;
+      }
+      .pink-bar {
+          background: #ffa5a5;
+      }
+      .green-bar{
+        background: #a7e9af;
+      }
+      .yellow-bar{
+          background: #fdfdc4;
+      }
+      .blue-bar{
+        background: #a6b1e1;
+      }
+
+      .skills .progress .progress-bar-primary {
+        background: #a5dee5;
+      }
+      .skills strong {
+        display: inline-block;
+        font-weight: normal;
+        padding-bottom: 6px;
+      }
+    
+    
+      @media ( max-width: 980px ) {
+        .skills {
+          margin-top: 30px;
+        }
+      }
+      
+      @media ( max-width: 360px ) {
+        header h1 {
+          font-size: 30px;
+        }
+        .about h2 {
+          font-size: 24px;
+        }
+        .education h4,
+        .experience h4 {
+          font-size: 20px;
+        }
+      }
+    
+  .website{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .website h4{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .website h3{
+    font-family: Arial, Helvetica, sans-serif;
+  }
