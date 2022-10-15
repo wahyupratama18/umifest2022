@@ -43,7 +43,7 @@
             </button>
 
             <!-- modal open -->
-            <div x-show="modal" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div x-show="modal" class="fixed inset-0 z-10 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
                 <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
                     <div x-cloak @click="modal = false" x-show="modal" 
                         x-transition:enter="transition ease-out duration-300 transform"
@@ -421,7 +421,7 @@
                 </template>
 
                 <!-- modal open -->
-                <div x-show="modal" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                <div x-show="modal" class="fixed inset-0 z-10 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
                     <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
                         <div x-cloak @click="modal = false" x-show="modal" 
                             x-transition:enter="transition ease-out duration-300 transform"
@@ -637,7 +637,7 @@
             <h2 class="text-3xl font-extrabold uppercase text-center mb-6" data-aos="fade-down">Frequently Asked Questions</h2>
             <ul class="flex flex-col list-none">
                 <template x-for="(faq, i) in faqs">
-                    <li class="border-y shadow" data-aos="fade-up">
+                    <li class="border-y" data-aos="fade-up">
                         <h4 class="flex flex-row justify-between items-center py-3 cursor-pointer" @click="handleAccordion(i)">
                             <span x-text="faq.name"></span>
                             <i class="fas fa-chevron-down" :class="accordion === i && 'rotate-180'"></i>
