@@ -1,863 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>ISS x UM iFest 2022</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/ISSIFEST.png" />
-        <!-- Font Awesome icons (free version) detail link: https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=video&m=free-->
-        <script src="https://kit.fontawesome.com/fa1675dc12.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Helvetica:400,700" rel="stylesheet" type="text/css" />
-        <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" /> -->
-        <link href="js/all.js" rel="stylesheet"></link>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <!-- <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.1"> -->
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#page-top">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#introduction">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#programs">Programs</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#timeline">Timeline</a></li>
-                        <!--
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#vote">Vote</a></li>
-                        -->
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#faq">FAQ</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="modal" href="#apply">Apply</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="modal" href="#download">Download</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="row header-home">
-                    <div class="col-lg-12">
-                        <center>
-                        <div class="mini-logo">
-                              <img src="assets/img/iss2022.png" class="img-fluid logo-hover" alt=""></img>
-                          </div>
-                        </center>
-                        <img src="assets/img/ISSIFEST.png" alt="ISS x UM Festival icon" style="width: 80%; margin-top: 40px; margin-bottom: 40px;" ></img>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h4>Workshop</h4>
-                        <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger"  target="_blank"  rel="noopener" >CLOSED</a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h4>Competition</h4>
-                        <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger"  target="_blank"  rel="noopener" >CLOSED</a>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <h4>Competition Winner</h4>
-                        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://drive.google.com/file/d/1InbbJiaHr28N39mP1TtScvOyrOTZyOhm/view?usp=sharing" target="_blank"  rel="noopener" >Click Here!</a>
-                    </div>
-                    
-                </div>
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ISS x UM iFest 2022">
+    <meta name="author" content="Office of International Affairs Universitas Negeri Malang">
+    <title>ISS x UM iFest 2022</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/ISSIFEST.png" />
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Helvetica:400,700" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/fa1675dc12.js" crossorigin="anonymous"></script>
 
-        <!-- Introduction
-        <section class="page-section" id="introduction">
-            <div class="container">
-                <center>
-                    <iframe class="teaser" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </center>
-                <br>
-                <br>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="css/aos.css" rel="stylesheet" />
+    <script src="js/app.js" defer></script>
+</head>
+<body id="page" class="text-slate-700">
+    <navbar
+    class="fixed top-0 w-full z-10 flex justify-end items-center h-20 text-slate-50 px-8"
+    x-data="{
+        modal: false,
+        navbars: [
+            {id: 'home', text: 'Home'},
+            {id: 'about', text: 'About'},
+            {id: 'programs', text: 'Programs'},
+            {id: 'timeline', text: 'Timeline'},
+            {id: 'faq', text: 'FAQ'},
+            {id: 'apply', text: 'Apply'},
+            {id: 'download', text: 'Download'},
+            {id: 'contact', text: 'Contact'},
+        ],
+        top: window.pageYOffset > 100
+    }"
+    :class="top && 'bg-iFest'"
+    @scroll.window="top = window.pageYOffset > 100"
+    >
+        <!-- small -->
+        <div class="flex items-center md:hidden">
+            <button title="Navbar toggler" type="button" @click="modal = true">
+                <i class="fas fa-bars"></i>
+            </button>
 
-            </div>
-        </section>
-        -->
-
-        <section class="page-section" id="introduction">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-12" style="margin-top: 30px; animation-duration:1s; visibility: visible; animation-name: fadeInUp;">
-                        <div class="text-center" style="transition-property:all; transition-duration:0.8s; transition-timing-function:ease; transition-delay:0s;">
-                            <a href="assets/img/UMiFest2022Poster.jpg">
-                                <img src="assets/img/UMiFest2022Poster.jpg" data-at2x="images/Poster_DRI19-20.jpg" width="95%" alt="Poster ISS x UM iFest">
-                            </a>
-                        </div>
-                      
-                    </div>
-                    <div class="col-lg-7 col-md-12 text-justify">
-                        <h2 class="section-heading text-uppercase">ABOUT ISS-UMiFEST 2022</h2>
-                        <p>
-                            UM iFest is one of the international programs organized by Office of International Affairs (OIA), Universitas Negeri Malang (UM). It is an expansion of UM’s flagship annual summer program, UM iCamp. Due to the global pandemic of Covid-19, thus the restriction on domestic and international travels, UM iCamp has to be put on hold. Yet, to answer the international demand on learning Bahasa Indonesia and the diversity of Indonesian cultures, OIA has come back stronger to offer an innovative virtual summer program, UM iFest since 2020.
-                        </p>
-                        <p>
-                            UM iFest is collaborating with the Ministry of Education and Culture Research and Technology in 2022. This year, UM iFest is merging with the Ministry’s program for Beasiswa Kemitraan Negara Berkembang (KNB Scholarship), International Student Summit (ISS). This is the second time UM has been trusted by the Ministry to organize ISS. The naming for this year has thus changed to ISS-UM iFest 2022 to indicate the special occasion. The program which will be delivered in two phases comprises language and cultural orientation program for the new awardees and enrichment program for the existing awardees.
-                        </p>
-                        <p>
-                            The first phase of ISS-UM iFest 2022 is dedicated to 2022’s KNB Scholarship awardees. Conducted in 23-25 August 2022, the program offers basic course on Bahasa Indonesia, as well as a series of elective courses, including culinary and culture.
-
-                        </p>
-                        <p>
-                            The second phase is competition. ISS-UM iFest will open several competition branches for existing and new KNB awardees. Stay tune for more information.
-                        </p>
-                        <h3 class="section-heading text-uppercase">Goals</h3>
-                        <ul class=" list-inline">
-                            <li>To offer basic course on basic Bahasa Indonesia;</li>
-                            <li>To introduce Indonesian diversity;</li>
-                            <li>To provide information on navigating life in Indonesia.</li>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="page-section" id="introduction" style="background-color: #001a53;">
-            <div class="container">
-                <div class="text-center prizes">
-                    <h1 class="text-uppercase" style="color: white;">Prizes</h1>
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 prizes-img">
-                            <img src="assets/img/umifestwinner2.png" alt="UM iFest Winner"></img>
-                            <br><br><br>
-                        </div>
-                        
-                        <div class="col-lg-4 col-md-12 prizes-text">
-                            <p>Essay:</p>
-                            <p>1st place: $150</p>
-                            <p>2nd place: $100</p>
-                            <p>3rd place: $75</p>
-                        </div>
-                        <div class="col-lg-4 col-md-12 prizes-text">    
-                            <p>Speech and News Reading:</p>
-                            <p>1st place: $175</p>
-                            <p>2nd place: $125</p>
-                            <p>3rd place: $100</p>
-                        </div>
-                        <div class="col-lg-4 col-md-12 prizes-text">
-                            <p>Vlog and Music Video:</p>
-                            <p>1st place: $250</p>
-                            <p>2nd place: $200</p>
-                            <p>3rd place: $150</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Programs Grid-->
-        <section class="page-section bg-light" id="programs">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Competitions</h2>
-                </div>
-                <center>
-                    <div class="text-muted">For General Rules</div>
-                <a class="btn btn-info text-uppercase js-scroll-trigger" href="https://drive.google.com/file/d/1ff9buIhM4K0CdnlIcSwQFuxrFGAjNe4V/view?usp=sharing" target="_blank"  rel="noopener" >Click Here!</a>
-                </center>
-                <br>
-                <br>
-                <div class="row text-center">
-                    
-                    
-
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-3x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-4">Vlog</h4>
-                        <p class="text-muted">Make a YouTube VLOG about Indonesian Culture/Education/Culinary.</p>
-                        <p class="text-muted"><a data-toggle="modal" href="#vlog">Click here for further information.</a></p>
-                    </div>
-
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-3x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-video fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-4">Speech</h4>
-                        <p class="text-muted">Voice your idea about Culture and Education in Indonesia through a speech.</p>
-                        <p class="text-muted"></p><a data-toggle="modal" href="#igTv">Click here for further information.</a></p>
-                    </div>
-
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-3x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-music fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-4">Music Video</h4>
-                        <p class="text-muted">Record your euphonious voice in singing an Indonesian song, harmonize it with your brand new creative video clip (music video).</p>
-                        <p class="text-muted"></p><a data-toggle="modal" href="#videoClip">Click here for further information.</a></p>
-                    </div>
-
-                    <div class="col-md-6">
-                        <span class="fa-stack fa-3x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-4">Essay</h4>
-                        <p class="text-muted">Write an essay about Indonesian culture/your country culture, COVID-19, or something you see in Indonesia.</p>
-                        <p class="text-muted"></p><a data-toggle="modal" href="#story">Click here for further information.</a></p>
-                    </div>
-                    <div class="col-md-6">
-                        <span class="fa-stack fa-3x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-music fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-4">News Reading</h4>
-                        <p class="text-muted">Challenge your great news reading skill.</p>
-                        <p class="text-muted"></p><a data-toggle="modal" href="#news">Click here for further information.</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Workshops -->
-        <section class="page-section bg-light" id="programs">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Online Workshops</h2>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-4 px-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/workshops/indo.jpg" alt="">
-                            <h4>Indonesia 1O1</h4>
-                            <p class="text-muted">Indonesia is the homeland of diverse cultures, traditions, and languages. Each region has its own local tradition and language. To unite the nations, Bahasa Indonesia is chosen to be the official and national language of Indonesia.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 px-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/workshops/coffe.jpg" alt="">
-                            <h4>Indonesian Coffee</h4>
-                            <p class="text-muted">Various Indonesian local coffees from different regions are ready to fresh your mind. How to make a perfect cup of coffee? Let's be the barista today at home. Have a great coffee!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 px-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/workshops/culinary.jpg" alt="" />
-                            <h4>Indonesian Culinary</h4>
-                            <p class="text-muted">In Indonesia, particularly Malang, Indonesian traditional street foods are easy to find. Exploring various Indonesian traditional street foods will be fun! In this workshop, you will not only watch and see, but also try to make one in your kitchen.</p>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 px-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/workshops/music.jpg" alt="" />
-                            <h4>Indonesian Traditional Songs and Musics</h4>
-                            <p class="text-muted">Exploring songs and music from other countries with different languages is not something new in this era. Even so, have you ever thought about exploring the traditional ones? They are really fascinating yet full of meaning.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 px-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/workshops/dance.jpg" alt="" />
-                            <h4>Indonesian Traditional Dance</h4>
-                            <p class="text-muted">Indonesia has a number of traditional dances in every corner. In this workshop, you will see some dancers performing their movements. Together with you, we will practice it while learning. Enjoy the dance!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                <!-- Timeline-->
-                <section class="page-section bg-light" id="timeline">
-                    <div class="container">
-                        <div class="text-center">
-                            <h2 class="section-heading text-uppercase">Competition Registration</h2>
-                            <h3 class="section-subheading text-muted">Important Dates.</h3>
-                        </div>
-                        <div class="text-center">
-                            <h4 class="text-muted">Registration: August – 29 October 2022</h4>
-                            <h4 class="text-muted">Project submission deadline : 30 October 2022</h4>
-<!--                            <h4 class="text-muted"><a style="color: rgb(23, 141, 161);">Project submission link: </a><a href="" style="color: rgb(14, 175, 122);"></a></h4> -->
-                            <h4 class="text-muted">Announcement : November 2022</h4>
-                        </div>
-                        <br><br><br>
-                        <div class="text-center">
-                            <h2 class="section-heading text-uppercase">Workshop Registration</h2>
-                            <h3 class="section-subheading text-muted">Important Dates.</h3>
-                        </div>
-                        <div class="text-center">
-<!--                            <h4 class="text-muted">Registration: - 2022</h4>-->
-                            <h4 class="text-muted">Workshops: 23 – 25 August 2022</h4>
-                        </div>
-                    </div>
-                </section>
-                <!-- Vote
-                <section class="page-section" id="vote" style="background-color: #160d42;">
-                    <div class="container">
-                        <div class="text-center prizes">
-                            <h1 class="text-uppercase" style="color: white;">IG TV Competition Vote</h1>
-                            <div class="col-lg-12">
-                                <img src="assets/img/umifest.png" style="width: 100%;"></img>
-                            </div>
-                            <br><br>
-                            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="vote.html" target="_blank"  rel="noopener" >Vote Now!</a>
-                        </div>
-                    </div>
-                </section> -->
+            <!-- modal open -->
+            <div x-show="modal" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                    <div x-cloak @click="modal = false" x-show="modal" 
+                        x-transition:enter="transition ease-out duration-300 transform"
+                        x-transition:enter-start="opacity-0" 
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-in duration-200 transform"
+                        x-transition:leave-start="opacity-100" 
+                        x-transition:leave-end="opacity-0"
+                        class="fixed inset-0 transition-opacity bg-slate-800 bg-opacity-40" aria-hidden="true"
+                    ></div>
         
-        <!-- Timeline-->
-        <section class="page-section" id="timeline">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Workshops Timeline</h2>
+                    <div x-cloak x-show="modal" 
+                        x-transition:enter="transition ease-out duration-300 transform"
+                        x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
+                        x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                        x-transition:leave="transition ease-in duration-200 transform"
+                        x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
+                        x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-iFest text-slate-50 rounded-lg shadow-xl 2xl:max-w-2xl"
+                    >
+                        <div class="grid grid-cols-2">
+                            <template x-for="navbar in navbars">
+                                <a :href="`#${navbar.id}`" class="p-4 text-center hover:text-slate-100" x-text="navbar.text" @click="modal = false"></a>
+                            </template>
+                        </div>
+                    </div>
                 </div>
-                <br><br>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/Timeline/duet.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Indonesia 101</h4>
+            </div>
+            <!-- modal close -->
+        </div>
+
+        <div class="hidden md:flex md:justify-start md:gap-x-6">
+            <template x-for="navbar in navbars">
+                <a :href="`#${navbar.id}`" class="hover:text-slate-100" x-text="navbar.text"></a>
+            </template>
+        </div>
+    </navbar>
+
+    <header id="home" class="bg-fest flex justify-center">
+        <div class="container grid grid-cols-1 py-20 gap-y-16">
+            <div class="flex justify-center">
+                <div class="bg-white/50 rounded-full flex justify-center px-4 py-2" data-aos="fade-down">
+                    <img src="./assets/img/iss2022.png" alt="UM iFest 2022" class="max-h-24">
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="./assets/img/ISSIFEST.png" alt="UM iFest 2022" class="w-3/4" data-aos="zoom-in">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" x-data="{
+                buttons: [
+                    {
+                        text: 'Workshop',
+                        open: false,
+                        href: 'https://drive.google.com/file/d/1ff9buIhM4K0CdnlIcSwQFuxrFGAjNe4V/view?usp=sharing'
+                    }, {
+                        text: 'Competition',
+                        open: false,
+                        href: 'https://drive.google.com/file/d/1ff9buIhM4K0CdnlIcSwQFuxrFGAjNe4V/view?usp=sharing'
+                    }, {
+                        text: 'Competition Winner',
+                        open: true,
+                        href: 'https://drive.google.com/file/d/1ff9buIhM4K0CdnlIcSwQFuxrFGAjNe4V/view?usp=sharing'
+                    },
+                ]
+            }">
+                <template x-for="(button, i) in buttons">
+                    <div class="text-center" :class="i == 2 ? 'md:col-span-2' : ''" data-aos="fade-down">
+                        <h4 class="text-2xl text-slate-50 mb-2" x-text="button.text"></h4>
+                        <button class="p-4 text-xl" :class="button.open ? 'button-primary' : 'button-secondary'" :disabled="!button.open">
+                            <a :href="button.href" x-show="button.open">Click Here!</a>
+                            <span x-show="!button.open">Closed</span>
+                        </button>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="flex justify-center py-20">
+        <div class="containing grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <img src="./assets/img/UMiFest2022Poster.jpg" alt="UM iFest Poster" class="row-start-2 md:row-start-1" data-aos="fade-up">
+
+            <div class="prose prose-p:text-justify prose-p:mb-2" data-aos="fade-down">
+                <h2 class="uppercase text-2xl font-extrabold">About ISS-UM iFest 2022</h2>
+                <p>
+                    UM iFest is one of the international programs organized by Office of International Affairs (OIA), Universitas Negeri Malang (UM). It is an expansion of UM’s flagship annual summer program, UM iCamp. Due to the global pandemic of Covid-19, thus the restriction on domestic and international travels, UM iCamp has to be put on hold. Yet, to answer the international demand on learning Bahasa Indonesia and the diversity of Indonesian cultures, OIA has come back stronger to offer an innovative virtual summer program, UM iFest since 2020.
+                </p>
+
+                <p>
+                    UM iFest is collaborating with the Ministry of Education and Culture Research and Technology in 2022. This year, UM iFest is merging with the Ministry’s program for Beasiswa Kemitraan Negara Berkembang (KNB Scholarship), International Student Summit (ISS). This is the second time UM has been trusted by the Ministry to organize ISS. The naming for this year has thus changed to ISS-UM iFest 2022 to indicate the special occasion. The program which will be delivered in two phases comprises language and cultural orientation program for the new awardees and enrichment program for the existing awardees.
+                </p>
+
+                <p>
+                    The first phase of ISS-UM iFest 2022 is dedicated to 2022’s KNB Scholarship awardees. Conducted in 23-25 August 2022, the program offers basic course on Bahasa Indonesia, as well as a series of elective courses, including culinary and culture.
+                </p>
+
+                <p>
+                    
+                    The second phase is competition. ISS-UM iFest will open several competition branches for existing and new KNB awardees. Stay tune for more information.
+                </p>
+
+                <!-- goals -->
+                <h2 class="uppercase text-2xl font-extrabold">Goals</h2>
+                <ol x-data="{
+                    goals: [
+                        'To offer basic course on basic Bahasa Indonesia;',
+                        'To introduce Indonesian diversity;',
+                        'To provide information on navigating life in Indonesia.'
+                    ]
+                }">
+                    <template x-for="goal in goals">
+                        <li x-text="goal"></li>
+                    </template>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="prizes" class="py-20 bg-iFest text-slate-50 flex justify-center"
+    x-data="{
+        competitions: [{
+            name: 'Essay:',
+            prizes: [{
+                position: '1st place',
+                award: '$150'
+            }, {
+                position: '2nd place',
+                award: '$100'
+            },{
+                position: '3rd place',
+                award: '$75'
+            },]
+        }, {
+            name: 'Speech and News Reading:',
+            prizes: [{
+                position: '1st place',
+                award: '$150'
+            }, {
+                position: '2nd place',
+                award: '$100'
+            },{
+                position: '3rd place',
+                award: '$75'
+            },]
+        }, {
+            name: 'Vlog and Music Video:',
+            prizes: [{
+                position: '1st place',
+                award: '$150'
+            }, {
+                position: '2nd place',
+                award: '$100'
+            },{
+                position: '3rd place',
+                award: '$75'
+            },]
+        },]
+    }">
+        <div class="containing">
+            <h2 class="text-3xl font-extrabold uppercase text-center" data-aos="zoom-up">Prizes</h2>
+            <div class="flex justify-center my-8">
+                <img src="./assets/img/umifestwinner2.png" alt="Prize for winners" class="max-h-60" data-aos="zoom-in-down">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-xl">
+                <template x-for="competition in competitions">
+                    <div>
+                        <h3 class="font-semibold text-2xl" x-text="competition.name" data-aos="fade-up"></h3>
+                        <template x-for="prize in competition.prizes">
+                            <p class="my-2" data-aos="fade-right">
+                                <span x-text="prize.position"></span>: <b x-text="prize.award"></b>
+                            </p>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="py-20 flex justify-center"
+    x-data="{
+        competitions: [{
+            name: 'Vlog',
+            icon: 'fab fa-youtube',
+            description: 'Make a YouTube VLOG about Indonesian Culture/Education/Culinary.',
+            detail: `<div class=\'flex gap-2 items-center justify-center\'>
+                <span class=\'fa-stack m-0\'>
+                    <i class=\'fas fa-circle fa-stack-2x text-iFest\'></i>
+                    <i class=\'fab fa-youtube fa-stack-1x fa-inverse\'></i>
+                </span>
+                <h2 class=\'uppercase m-0\'>Vlog</h2>
+            </div>
+            <ol class=\'text-left\'>
+                <li>Language: Indonesian or English;</li>
+                <li>Type: Individual or in a Group;</li>
+                <li>Maximum duration: 10 minutes;</li>
+                <li>Theme (choose one):</li>
+                <p>a. Indonesian Culture;</p>
+                <p>b. Education in Indonesia;</p>
+                <p>c. Indonesian Culinary;</p>
+                <p>d. A Place in Indonesia;</p>
+                <p>e. Indonesian Traditional Music;</p>
+                <p>f. Indonesian Traditional Games;</p>
+                <li>Upload the Vlog on YouTube.</li>
+                <p>a. YouTube Video Title: UMiFest 2022 - VLOG Competition</p>
+                <p>b. YouTube Description: (Name, VLOG Title, University, Individual (if individual) or Group Name (if in a group), #ISSxUMiFest2022 #UMalang)</p>
+                <p><b>Example:</b> Bruno Mario, How I Get Along with Me, Universitas Negeri Malang, Individual or Group A, #ISSxUMiFest2022 #UMalang</p>
+                <li>Submit the link of the YouTube Vlog into Google Form (link);</li>
+                <li>Sharing the short version of the video in your other personal platforms is allowed by using the hashtags of #ISSxUMiFest2022 #UMalang</li>
+                <li>Scoring criteria: Content, Quality/Creativity, Originality, Likes and Viewers in YouTube, Duration.</li>
+            </ol>`,
+        }, {
+            name: 'Speech',
+            icon: 'fas fa-video',
+            description: 'Voice your idea about Culture and Education in Indonesia through a speech.',
+            detail: `<div class=\'flex gap-2 items-center justify-center\'>
+                <span class=\'fa-stack m-0\'>
+                    <i class=\'fas fa-circle fa-stack-2x text-iFest\'></i>
+                    <i class=\'fab fa-instagram fa-stack-1x fa-inverse\'></i>
+                </span>
+                <h2 class=\'uppercase m-0\'>Vlog</h2>
+            </div>
+            <ol class=\'text-left\'>
+                <li>Language: Indonesian or English;</li>
+                <li>Type: Individual;</li>
+                <li>Must be a ONE-TAKE shot video (no cut, no merge/combine video and sound);</li>
+                <li>Maximum duration: 5 minutes;</li>
+                <li>Theme: Culture and Education in Indonesia;</li>
+                <li>Upload the speech video on YouTube (personal account).</li>
+                <p>
+                    a. YouTube Video Title: UMiFest 2022 - Speech Competition
+                </p>
+                <p>
+                    b. YouTube Description: (Name, Speech Title, University, #ISSxUMiFest2022 #UMalang)
+                </p>
+                <p>
+                    <b>Example:</b> Bruno Mario, How I Get Along with Me, Universitas Negeri Malang #ISSxUMiFest2022 #UMalang
+                </p>
+                <li>Submit the link of the YouTube Speech video into Google Form (link);</li>
+                <li>Sharing the short version of the video in your other personal platforms is allowed by using the hashtags of #ISSxUMiFest2022 #UMalang;</li>
+                <li>Scoring criteria: Duration, Content, Fluency, Originality.</li>
+            </ol>`,
+        }, {
+            name: 'Music Video',
+            icon: 'fas fa-music',
+            description: 'Record your euphonious voice in singing an Indonesian song, harmonize it with your brand new creative video clip (music video).',
+            detail: `<div class=\'flex gap-2 items-center justify-center\'>
+                <span class=\'fa-stack m-0\'>
+                    <i class=\'fas fa-circle fa-stack-2x text-iFest\'></i>
+                    <i class=\'fas fa-music fa-stack-1x fa-inverse\'></i>
+                </span>
+                <h2 class=\'uppercase m-0\'>Indonesian Song Video Clip</h2>
+            </div>
+            <ol class=\'text-left\'>
+                <li>Must be an Indonesian song (the language is in Indonesian);</li>
+                <li>Genre: any genre (pop, campursari, dangdut, etc.);</li>
+                <li>Type: Individual or in a Group;</li>
+                <li>Participants can also use any instruments;</li>
+                <li>Duration: adjusting with the original song;</li>
+                <li>Upload the song cover video on YouTube:</li>
+                <p>a. YouTube Video Title: UMiFest 2022 - Singing Competition</p>
+                <p>b. YouTube Description: (Name, Song Title, University, Individual (if individual) or Group Name (if in a group), #ISSxUMiFest2022 #UMalang)</p>
+                <p><b>Example:</b> Ariana Maria, Bengawan Solo, Universitas Negeri Semarang, Individual or Group A #ISSxUMiFest2022 #UMalang</p>
+                <li>Submit the link of the YouTube Singing video into Google Form (link);</li>
+                <li>Sharing the short version of the video in your other personal platforms is allowed by using the hashtags of #ISSxUMiFest2022 #UMalang;</li>
+                <li>Scoring criteria: Creativity, Originality, Performance, Voice.</li>
+            </ol>`,
+        }, {
+            name: 'Essay',
+            icon: 'fas fa-book-open',
+            description: 'Write an essay about Indonesian culture/your country culture, COVID-19, or something you see in Indonesia.',
+            detail: `<div class=\'flex gap-2 items-center justify-center\'>
+                <span class=\'fa-stack m-0\'>
+                    <i class=\'fas fa-circle fa-stack-2x text-iFest\'></i>
+                    <i class=\'fas fa-book-open fa-stack-1x fa-inverse\'></i>
+                </span>
+                <h2 class=\'uppercase m-0\'>Essay</h2>
+            </div>
+            <ol class=\'text-left\'>
+                <li>Language: Indonesian or English;</li>
+                <li>Type: Individual;</li>
+                <li>Maximum words: 1000-2000 words;</li>
+                <li>Theme (choose one):</li>
+                <p>a. Indonesian culture/your country culture;</p>
+                <p>b. COVID-19;</p>
+                <p>c. What Do You See in Indonesia?</p>
+                <li>Submit the document via Google Form (link);</li>
+                <li>File format: .doc/.docx (Microsoft Word);</li>
+                <li>Scoring criteria: Words, Content, Quality, Originality.</li>
+            </ol>`,
+        }, {
+            name: 'News Reading',
+            icon: 'fas fa-music',
+            description: 'Challenge your great news reading skill.',
+            detail: `<div class=\'flex gap-2 items-center justify-center\'>
+                <span class=\'fa-stack m-0\'>
+                    <i class=\'fas fa-circle fa-stack-2x text-iFest\'></i>
+                    <i class=\'fas fa-music fa-stack-1x fa-inverse\'></i>
+                </span>
+                <h2 class=\'uppercase m-0\'>Vlog</h2>
+            </div>
+            <ol class=\'text-left\'>
+                <li>Language: Indonesian;</li>
+                <li>Type: Individual;</li>
+                <li> Must be a ONE-TAKE shot video (no cut, no merge/combine video and sound);</li>
+                <li>Maximum duration: 5 minutes;</li>
+                <li>Theme (choose one):</li>
+                <p>a. Culture;</p>
+                <p>b. COVID-19 Situation;</p>
+                <p>c. Education;</p>
+                <li>News reading text is arranged by the committee. The text will be sent to the Liaison Officer (LO) of each university after all the online workshop sessions end;</li>
+                <li>Upload the news reading video on YouTube.</li>
+                <p>a. YouTube Video Title: UM iFest 2022 - News Reading Competition</p>
+                <p>b. YouTube Description: (Name, News Reading Text Title, University, #ISSxUMiFest2022 #UMalang)</p>
+                <p><b>Example:</b> Enola, Online Education during COVID-19, Universitas Negeri Malang #ISSxUMiFest2022 #UMalang</p>
+                <li>Submit the YouTube link into Google Form (link);</li>
+                <li>Sharing the short version of the video in your other personal platforms is ALLOWED by using the hashtags of #ISSxUMiFest2022 #UMalang</li>
+                <li>Scoring criteria: Fluency, Performance, Duration, Pronunciation;</li>
+                <li><a href=\'https://drive.google.com/file/d/1ThZu0MLlUFzrDz8BszEv2EW-rHdRGKFP/view?usp=sharing\'>Download the text here.</a></li>
+            </ol>`,
+        }],
+        workshops: [{
+            name: 'Indonesia 101',
+            description: 'Indonesia is the homeland of diverse cultures, traditions, and languages. Each region has its own local tradition and language. To unite the nations, Bahasa Indonesia is chosen to be the official and national language of Indonesia.',
+            image: './assets/img/workshops/indo.jpg',
+        }, {
+            name: 'Indonesian Coffee',
+            description: 'Various Indonesian local coffees from different regions are ready to fresh your mind. How to make a perfect cup of coffee? Let\'s be the barista today at home. Have a great coffee!',
+            image: './assets/img/workshops/coffe.jpg',
+        }, {
+            name: 'Indonesian Culinary',
+            description: 'In Indonesia, particularly Malang, Indonesian traditional street foods are easy to find. Exploring various Indonesian traditional street foods will be fun! In this workshop, you will not only watch and see, but also try to make one in your kitchen.',
+            image: './assets/img/workshops/culinary.jpg',
+        }, {
+            name: 'Indonesian Traditional Songs and Musics',
+            description: 'Exploring songs and music from other countries with different languages is not something new in this era. Even so, have you ever thought about exploring the traditional ones? They are really fascinating yet full of meaning.',
+            image: './assets/img/workshops/music.jpg',
+        }, {
+            name: 'Indonesian Traditional Dance',
+            description: 'Indonesia has a number of traditional dances in every corner. In this workshop, you will see some dancers performing their movements. Together with you, we will practice it while learning. Enjoy the dance!',
+            image: './assets/img/workshops/dance.jpg',
+        },]
+    }"
+    >
+        <div class="containing">
+            <h2 class="text-3xl font-extrabold uppercase text-center" data-aos="fade-down">Competitions</h2>
+
+            <p class="text-center my-4" data-aos="fade-down">For General Rules</p>
+
+            <a title="General Rules" href="https://drive.google.com/file/d/1ff9buIhM4K0CdnlIcSwQFuxrFGAjNe4V/view?usp=sharing" class="flex justify-center" data-aos="fade-down">
+                <button type="button" class="button-iFest" title="General Rules about this competition">Click Here!</button>
+            </a>
+
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-12 my-8" x-data="{modal: false, detail: ''}">
+                <template x-for="(competition, i) in competitions">
+                    <div class="flex flex-col gap-y-3 text-center"
+                    :class="i > 2 ? 'md:col-span-3' : 'md:col-span-2'"
+                    data-aos="flip-left"
+                    >
+                        <div class="flex justify-center">
+                            <div class="bg-iFest p-4 text-white rounded-full">
+                                <i class="fa-3x" :class="competition.icon"></i>
                             </div>
-                            <div class="timeline-body"><p class="">23-24 August 2022 - (13:00 - 14:30 GMT +7)</p></div>
-                            <div class="timeline-body"><p class=""><b>MS. MUSTIKA & MS. CANDRIKA</b> - BIPA Instructor at State University of Malang and Rumah Indonesia (Washington DC) & EFL Lecturer at Bina Nusantara University and BIPA Instructor</p></div>
                         </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/Timeline/ariady.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading no-padding">
-                                <h4>Indonesian Coffee</h4>
+
+                        <h4 class="text-xl font-bold" x-text="competition.name"></h4>
+
+                        <p x-text="competition.description"></p>
+
+                        <a href="javascript:void(0)" class="text-iFest font-semibold" @click="
+                        modal = true;
+                        detail = competition.detail
+                        ">Click here for further information.</a>
+                    </div>
+                </template>
+
+                <!-- modal open -->
+                <div x-show="modal" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                    <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                        <div x-cloak @click="modal = false" x-show="modal" 
+                            x-transition:enter="transition ease-out duration-300 transform"
+                            x-transition:enter-start="opacity-0" 
+                            x-transition:enter-end="opacity-100"
+                            x-transition:leave="transition ease-in duration-200 transform"
+                            x-transition:leave-start="opacity-100" 
+                            x-transition:leave-end="opacity-0"
+                            class="fixed inset-0 transition-opacity bg-slate-800 bg-opacity-40" aria-hidden="true"
+                        ></div>
+            
+                        <div x-cloak x-show="modal" 
+                            x-transition:enter="transition ease-out duration-300 transform"
+                            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
+                            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                            x-transition:leave="transition ease-in duration-200 transform"
+                            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
+                            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                            class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-slate-100 rounded-lg shadow-xl 2xl:max-w-2xl"
+                        >
+                            <div x-html="detail" class="prose prose-p:m-0 prose-p:p-0">
                             </div>
-                            <div class="timeline-body"><p class="">23 August 2022 - (15:00 - 16:30 GMT +7)</p></div>
-                            <div class="timeline-body"><p class=""><b>MR. ARIADY</b> - Nusantara Coffee Connoisseur</p></div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/Timeline/chozin.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Indonesian Traditional Songs and Musics</h4>
+                    </div>
+                </div>
+                <!-- modal close -->
+            </div>
+
+            <!-- workshops -->
+            <h2 class="text-3xl font-extrabold uppercase text-center my-8" data-aos="fade-down">Online Workshops</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-12 my-8">
+                <template x-for="(workshop, i) in workshops">
+                    <div class="flex flex-col gap-y-3 text-center"
+                    :class="i > 2 ? 'md:col-span-3' : 'md:col-span-2'"
+                    data-aos="flip-right">
+                        <div class="flex justify-center">
+                            <img :src="workshop.image" alt="workshop.name" class="h-48 rounded-full border-8 border-slate-300 aspect-square">
+                        </div>
+
+                        <h4 class="text-xl font-bold" x-text="workshop.name"></h4>
+
+                        <p x-text="workshop.description"></p>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="py-20 bg-slate-100 flex justify-center"
+    x-data="{
+        timelines: [{
+            name: 'COMPETITION REGISTRATION',
+            schedules: [{
+                name: 'Registration',
+                date: 'August - 29 October 2022',
+                open: true,
+            }, {
+                name: 'Project submission deadline',
+                date: '30 October 2022',
+                open: true,
+            }, {
+                name: 'Announcement',
+                date: 'November 2022',
+                open: true,
+            }]
+        }, {
+            name: 'WORKSHOP REGISTRATION',
+            schedules: [{
+                name: 'Workshops',
+                date: '23 – 25 August 2022',
+                open: true,
+            }]
+        }],
+        workshops: [{
+            name: 'Indonesia 101',
+            image: './assets/img/Timeline/duet.jpg',
+            time: '23-24 August 2022 - (13:00 - 14:30 GMT +7)',
+            speech: 'MS. MUSTIKA & MS. CANDRIKA',
+            position: 'BIPA Instructor at State University of Malang and Rumah Indonesia (Washington DC) & EFL Lecturer at Bina Nusantara University and BIPA Instructor'
+        }, {
+            name: 'Indonesian Coffee',
+            image: './assets/img/Timeline/ariady.jpg',
+            time: '23 August 2022 - (15:00 - 16:30 GMT +7)',
+            speech: 'MR. ARIADY',
+            position: 'Nusantara Coffee Connoisseur'
+        }, {
+            name: 'Indonesian Traditional Songs and Musics',
+            image: './assets/img/Timeline/chozin.jpg',
+            time: '23 August 2022 - (15:00 - 16:30 GMT +7)',
+            speech: 'MR. CHOZIN MUKTI',
+            position: 'Professional Composer'
+        }, {
+            name: 'Indonesian Culinary',
+            image: './assets/img/Timeline/andes.jpg',
+            time: '24 August 2022 - (15:00 - 16:30 GMT +7)',
+            speech: 'MR. ANDES FIBRIAN',
+            position: 'Business Owner PRIME 8 KITCHEN'
+        }, {
+            name: 'Indonesian Traditional Dance',
+            image: './assets/img/Timeline/ika.JPG',
+            time: '24 August 2022 - (15:00 - 16:30 GMT +7)',
+            speech: 'MS. IKA PRATIWI',
+            position: 'Professional Dancer & Traditional Dance Instructor'
+        },]
+    }">
+        <div class="containing text-center">
+            <template x-for="timeline in timelines">
+                <div class="mb-12" data-aos="zoom-in-down">
+                    <h2 class="text-3xl font-extrabold uppercase text-center mb-2" x-text="timeline.name"></h2>
+                    <small class="text-slate-400">Important Dates.</small>
+
+                    <div class="mt-6">
+                        <template x-for="schedule in timeline.schedules">
+                            <h4 class="text-lg text-slate-500" x-text="`${schedule.name}: ${schedule.date}`"></h4>
+                        </template>
+                    </div>
+                </div>
+            </template>
+            <div class="mt-4">
+                <h2 class="text-3xl font-extrabold uppercase text-center mb-6" data-aos="fade-down">Workshops Timeline</h2>
+                <ul class="list-none timeline relative p-0">
+                    <template x-for="(workshop, i) in workshops">
+                        <li data-aos="zoom-in">
+                            <img :src="workshop.image" :alt="workshop.name" class="rounded-full h-24 aspect-square md:h-40 border-4 border-slate-300 inline lg:absolute lg:left-[calc(50%-5rem)]">
+                            <div class="text-justify lg:min-h-[12rem] lg:w-[calc(50%-7.5rem)] align-middle"
+                            :class="i % 2 === 1 && 'lg:ml-[calc(50%+7.5rem)]'">
+                                <h4 class="text-lg font-bold" x-text="workshop.name"></h4>
+                                <p class="mt-2" x-text="workshop.time"></p>
+                                <p class="mt-2">
+                                    <b x-text="workshop.speech"></b> - <span x-text="workshop.position"></span>
+                                </p>
                             </div>
-                            <div class="timeline-body"><p class="">23 August 2022 - (15:00 - 16:30 GMT +7)</p></div>
-                            <div class="timeline-body"><p class=""><b>MR. CHOZIN MUKTI</b> - Professional Composer</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" style="width: 100%;" src="assets/img/Timeline/andes.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Indonesian Culinary</h4>
-                            </div>
-                            <div class="timeline-body"><p class="">24 August 2022 - (15:00 - 16:30 GMT +7)</p></div>
-                            <div class="timeline-body"><p class=""><b>MR. ANDES FIBRIAN</b> - Business Owner PRIME 8 KITCHEN</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/Timeline/ika.JPG" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Indonesian Traditional Dance</h4>
-                            </div>
-                            <div class="timeline-body"><p class="">24 August 2022 - (15:00 - 16:30 GMT +7)</p></div>
-                            <div class="timeline-body"><p class=""><b>MS. IKA PRATIWI</b> - Professional Dancer & Traditional Dance Instructor</p></div>
-                        </div>
-                    </li>
+                        </li>
+                    </template>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 flex justify-center"
+    x-data="{
+        faqs: [{
+            name: 'What is UM iFest 2022?',
+            description: `<p>
+                It is a virtual summer program presented by UM iFest by Universitas Negeri Malang in collaboration with ISS (International Student Summit) of KNB (Kemitraan Negara Berkembang) by the Ministry of Education and Culture Research and Technology in order to introduce Indonesian language and culture to international students (non-Indonesian), especially KNB students.
+            </p>`
+        }, {
+            name: 'How to apply to this event?',
+            description: `<p>
+                <ol class=\'list-[lower-latin]\'>
+                    <li>
+                        To apply for online workshop, register to (<a href=\'https://docs.google.com/forms/d/e/1FAIpQLSenHGm0lbi2gDz9tziIyRap0pD47OLxmQ0DRW3ae63eKPxZxQ/viewform?usp=sf_link\' target=\'_blank\'  rel=\'noopener\'>here</a>)<br>
+                        Applicants will receive an email of succesful registration.
+                    </li>
+                    <li>
+                        To apply for online competition, register to (<a href=\'https://docs.google.com/forms/d/e/1FAIpQLScMXMxbQm2Rrch0qdbf5jt0Cr4woRyMNB8TSvOwBTSjwrUONQ/viewform\' target=\'_blank\'  rel=\'noopener\'>here</a>)<br>
+                        Applicants will receive an email of succesful registration.
+                    </li>
+            </p>`
+        }, {
+            name: 'What is the aim of this program?',
+            description: `<p>
+                The program aims to provide overseas fellows to learn Indonesian language, culinary and cultures.
+            </p>`
+        }, {
+            name: 'Who can join UM iFest?',
+            description: `<p>
+                ISS-UM iFest 2022 is designed for all KNB students.
+            </p>`
+        }, {
+            name: 'When is the registration deadline?',
+            description: `<p>
+                The registration of online competitions will be closed on 29 October 2022.
+            </p>`
+        }, {
+            name: 'Is this program free?',
+            description: `<p>
+                Yes, this program is free since all of the programs will be online-based.
+            </p>`
+        }, {
+            name: 'Is one participant allowed to join more than one competition?',
+            description: `<p>
+                Yes, they are allowed to join more than one competition.
+            </p>`
+        }, {
+            name: 'Are participants who do not join the workshops allowed to join the competition?',
+            description: `<p>
+                No, participants must join at least two workshops to join the competition.
+            </p>`
+        }, {
+            name: 'I am an Indonesian or I am an Indonesian student studying abroad. Can I apply for UM iFest?',
+            description: `<p>
+                No, you can\'t. ISS-UM iFest 2022 is only for KNB students.
+            </p>`
+        }, {
+            name: 'Can we make a team to join the competition or must it be individual?',
+            description: `<p>
+                Essay, Speech, and News Reading Competition must be individual, while Vlog and Music Video Competition can be individual or in a group.
+            </p>`
+        }],
+        accordion: 0,
+        handleAccordion: (i) => {
+            if ($data.accordion === i) {
+                $data.accordion = false
+                return
+            }
+
+            $data.accordion = i;
+        }
+    }">
+        <div class="containing">
+            <h2 class="text-3xl font-extrabold uppercase text-center mb-6" data-aos="fade-down">Frequently Asked Questions</h2>
+            <ul class="flex flex-col list-none">
+                <template x-for="(faq, i) in faqs">
+                    <li class="border-y shadow" data-aos="fade-up">
+                        <h4 class="flex flex-row justify-between items-center py-3 cursor-pointer" @click="handleAccordion(i)">
+                            <span x-text="faq.name"></span>
+                            <i class="fas fa-chevron-down" :class="accordion === i && 'rotate-180'"></i>
+                        </h4>
+
+                        <div class="prose prose-p:text-justify p-3 border-l-4 border-l-iFest" x-show="accordion === i" x-html="faq.description" x-transition></div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <section id="addresses" class="bg-iFest py-20 flex justify-center text-slate-50"
+        x-data="{
+            contacts: [{
+                name: 'Phone',
+                href: 'tel:+62 (341) 584-759',
+                icon: 'fas fa-phone',
+                text: '+62 (341) 584-759'
+            }, {
+                name: 'Whatsapp',
+                href: 'https://wa.me/+6282134134620',
+                icon: 'fab fa-whatsapp',
+                text: '+62 821-3413-4620'
+            }, {
+                name: 'Email',
+                href: 'mailto:umifest@um.ac.id',
+                icon: 'fas fa-mail-open',
+                text: 'umifest@um.ac.id'
+            }, {
+                name: 'Address',
+                href: 'https://goo.gl/maps/Ekz2xYFKjr1dtsZh8',
+                icon: 'fas fa-map-marker',
+                text: 'Jl. Semarang No. 5 Malang 65145, East Java, Indonesia'
+            }],
+            socials: [{
+                name: 'Web page',
+                href: 'http://oia.um.ac.id/',
+                icon: 'fas fa-globe',
+            }, {
+                name: 'Facebook',
+                href: 'http://oia.um.ac.id/',
+                icon: 'fab fa-facebook-f',
+            }, {
+                name: 'Instagram',
+                href: 'https://www.instagram.com/oia_um/',
+                icon: 'fab fa-instagram',
+            }, {
+                name: 'YouTube',
+                href: 'https://www.youtube.com/channel/UC1XP5w9EUyHGsKdZJU-awcQ/',
+                icon: 'fab fa-youtube',
+            }, {
+                name: 'Twitter',
+                href: 'https://twitter.com/oiaum_',
+                icon: 'fab fa-twitter',
+            }]
+        }">
+            <div class="containing" data-aos="fade-down">
+                <h2 class="text-3xl font-extrabold uppercase text-center mb-6">Contact Us</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <iframe title="OIA Address"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3387303999907!2d112.61885079999999!3d-7.963902800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6282a9b536fd3%3A0x7f48f86c54b1e45!2sKantor%20Hubungan%20Internasional%20Universitas%20Negeri%20Malang!5e0!3m2!1sid!2sid!4v1665797166712!5m2!1sid!2sid"
+                    width="100%"
+                    height="450"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="md:col-span-2"></iframe>
+
+                    <div>
+                        <template x-for="contact in contacts">
+                            <p class="mb-4">
+                                <a :title="contact.name" :href="contact.href" target="_blank">
+                                    <i :class="contact.icon"></i> <span x-text="contact.text"></span>
+                                </a>
+                            </p>
+                        </template>
+                        
+                        <div class="flex gap-4 mt-4">
+                            <template x-for="social in socials">
+                                <a :title="social.title" :href="social.href" class="p-2 text-slate-700 bg-slate-100 rounded-full w-10 aspect-square flex items-center justify-center hover:bg-fest-blue/70 hover:text-slate-50">
+                                    <i :class="social.icon"></i>
+                                </a>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq section-bg">
-        <div class="container">
-
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Frequently Asked Questions</h2>
+        <section id="credits" class="flex justify-center py-8">
+            <div class="containing">
+                Copyright &copy; Office of International Affairs Universitas Negeri Malang
             </div>
-            <br>
-            <br>
-
-            <div class="mb-4 text-sm" id="accordion">
-                    <div class="p-4 card" id="headingOne">
-                        <h6 class="mb-0 text-sm" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is UM iFest 2022?
-                        </h6>
-                    </div>
-                
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card p-4">
-                            It is a virtual summer program presented by UM iFest by Universitas Negeri Malang in collaboration with ISS (International Student Summit) of KNB (Kemitraan Negara Berkembang) by the Ministry of Education and Culture Research and Technology in order to introduce Indonesian language and culture to international students (non-Indonesian), especially KNB students.
-                        </div>
-                    </div>
-                    <div class="p-4 card" id="headingTwo">
-                        <h6 class="mb-0 text-sm" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                            What is UM iFest 2022?
-                        </h6>
-                    </div>
-                
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card p-4">
-                            It is a virtual summer program presented by UM iFest by Universitas Negeri Malang in collaboration with ISS (International Student Summit) of KNB (Kemitraan Negara Berkembang) by the Ministry of Education and Culture Research and Technology in order to introduce Indonesian language and culture to international students (non-Indonesian), especially KNB students.
-                        </div>
-                    </div>
-            </div>
-            <div class="row  d-flex align-items-stretch">
-  
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-              <h4>What is UM iFest 2022?</h4>
-                <p>
-                    It is a virtual summer program presented by UM iFest by Universitas Negeri Malang in collaboration with ISS (International Student Summit) of KNB (Kemitraan Negara Berkembang) by the Ministry of Education and Culture Research and Technology in order to introduce Indonesian language and culture to international students (non-Indonesian), especially KNB students.
-                </p>
-            </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-                <h4>How to apply to this event?</h4>
-                  <p>
-                      a. To apply for online workshop, register to (<a href="https://docs.google.com/forms/d/e/1FAIpQLSenHGm0lbi2gDz9tziIyRap0pD47OLxmQ0DRW3ae63eKPxZxQ/viewform?usp=sf_link" target="_blank"  rel="noopener" >here</a>)<br>
-                      Applicants will receive an email of succesful registration.
-                      a. To apply for online competition, register to (<a href="https://docs.google.com/forms/d/e/1FAIpQLScMXMxbQm2Rrch0qdbf5jt0Cr4woRyMNB8TSvOwBTSjwrUONQ/viewform" target="_blank"  rel="noopener" >here</a>)<br>
-                      Applicants will receive an email of succesful registration.
-                  </p>
-              </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-              <h4>What is the aim of this program?</h4>
-                <p>
-                    The program aims to provide overseas fellows to learn Indonesian language, culinary and cultures.
-                </p>
-            </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-              <h4>Who can join UM iFest?</h4>
-                <p>
-                    ISS-UM iFest 2022 is designed for all KNB students.
-                </p>
-            </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-              <h4>When is the registration deadline?</h4>
-                <p>
-                    The registration of online competitions will be closed on 29 October 2022.
-                </p>
-            </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-              <h4>Is this program free?</h4>
-                <p>
-                    Yes, this program is free since all of the programs will be online-based.
-                </p>
-            </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-              <h4>Is one participant allowed to join more than one competition?</h4>
-                <p>
-                    Yes, they are allowed to join more than one competition.
-                </p>
-            </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-              <h4>Are participants who do not join the workshops allowed to join the competition?</h4>
-                <p>
-                    Yes, they are allowed.
-                </p>
-            </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-              <h4> I am an Indonesian or I am an Indonesian student studying abroad. Can I apply for UM iFest?</h4>
-                <p>
-                    No, you cannot. ISS-UM iFest 2022 is only for KNB students.
-                </p>
-            </div>
-
-            <div class="col-lg-6 faq-item" data-aos="fade-up">
-                <h4>Can we make a team to join the competition or must it be individual?</h4>
-                  <p>
-                    Essay, Speech, and News Reading Competition must be individual, while Vlog and Music Video Competition can be individual or in a group.
-                  </p>
-            </div>
-            
-
-  
-          </div>
-  
-        </div>
-      </section><!-- End Frequently Asked Questions Section -->
-
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 text-left">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d63221.450663334464!2d112.58373742625984!3d-7.963702126782045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m5!1s0x2dd6282a9b536fd3%3A0x7f48f86c54b1e45!2sKantor%20Hubungan%20Internasional%20Universitas%20Negeri%20Malang%2C%20Jalan%20Semarang%2C%20Sumbersari%2C%20Kota%20Malang%2C%20Jawa%20Timur!3m2!1d-7.9637407!2d112.61881319999999!4m3!3m2!1d-7.9637407!2d112.61881319999999!5e0!3m2!1sid!2sid!4v1595578034072!5m2!1sid!2sid" title="OIA Address" height="400px" width="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                    <div class="col lg-4" style="vertical-align: middle;">
-                        <p class="section-heading">Phone: +62 (341) 584-759</p>
-                        <p class="section-heading ">WhatsApp: +62 821-3413-4620</p>
-                        <p class="section-heading ">Email: umifest@um.ac.id</p>
-                        <p class="section-heading ">Address: <br/>Jl. Semarang No. 5 Malang 65145, East Java, Indonesia</p>
-                        <a class="btn btn-light btn-social mx-2" href="http://oia.um.ac.id/"><i class="fa fa-globe"></i></a>
-                        <a class="btn btn-light btn-social mx-2" href="https://web.facebook.com/internationalUM"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-light btn-social mx-2" href="https://www.instagram.com/oia_um/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-light btn-social mx-2" href="https://www.youtube.com/channel/UC1XP5w9EUyHGsKdZJU-awcQ/"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-light btn-social mx-2" href="https://twitter.com/oiaum_"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                </div>
         </section>
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center text-center">
-                    Copyright © Office of International Affairs Universitas Negeri Malang
-                </div>
-            </div>
-        </footer>
-          <!-- Modal00 -->
-            <div class="modal fade" id="announcementModal" tabindex="-1" role="dialog" aria-labelledby="announcementModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <!-- <div class="modal-header">
-                    <h3 class="modal-title" id="announcementModalLabel"><strong>UM iCamp 2020 CANCELLATION</strong></h3>
-                    </div> -->
-                    <div class="modal-body">
-                        <p>Thank you for participating in "UM iFEST 2020"</p>
-                        <p>We will announce the winners of the UM ifest on 18 October 2020</p>
-
-                    <!-- <div>
-                        <h3>Background</h3>
-                        <p>
-                        UM iCamp is part of the continued efforts of Universitas Negeri Malang to enhance global education. The program was initiated to provide overseas college students with hands-on opportunities to learn Indonesian language and experience the cultural and academic life in Indonesia.
-                        </p>
-                        <p>
-                        This intensive program consists of classroom sessions, socio-cultural sessions, and field trips to cultural and historical venues. Through the sessions, international students will have opportunities to better understand the dynamic aspects of Indonesian society in the past, present, and future.
-                        </p>
-                    </div> -->
-                    </div>
-                    <div class="modal-footer">
-                    <a href="./cancellation" target="_blank"  rel="noopener" ><button type="button" class="btn btn-primary">More Information</button></a>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-       <!--
-       <script type="text/javascript">
-            $(window).on('load',function(){
-                $('#myModal').modal('show');
-            });
-        </script>
--->
-
-<div class="modal hide fade" id="myModal">
-    <div class="modal-dialog" >
-        <div class="modal-content">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="modal-body">
-                            <center>
-                                <!-- Project Details Go Here-->
-                                <h3 class="text-uppercase">UM iFest 2020 Competition Winner
-                                </h3>
-                                    <button class="btn btn-primary" type="button">
-                                        <a href="https://drive.google.com/file/d/1-rHCtraan227k3tw8SCKnxWpTwJ3qbhV/view?usp=sharing" target="_blank"  rel="noopener"  style="color: white;">Check Here!</a>
-                                    </button>
-                                <button class="btn btn-danger" data-dismiss="modal" type="button">
-                                    Close
-                                </button>
-                            </center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-        <!-- Modals -->
-        <div class="portfolio-modal modal fade" id="apply" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">How to apply</h2>
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <ol class="text-left">
-                                        ●	Fill the registration form, <a href="https://docs.google.com/forms/d/e/1FAIpQLSenHGm0lbi2gDz9tziIyRap0pD47OLxmQ0DRW3ae63eKPxZxQ/viewform?usp=sf_link" target="_blank"  rel="noopener" >here!</a> (for workshop) <br>
-                                        ●	Fill the registration form, <a href="https://docs.google.com/forms/d/e/1FAIpQLScMXMxbQm2Rrch0qdbf5jt0Cr4woRyMNB8TSvOwBTSjwrUONQ/viewform" target="_blank"  rel="noopener" >here!</a> (for competition)
-                                    </ol>
-                                    <!--https://docs.google.com/forms/d/e/1FAIpQLSe4kfBEXX4CggL1o9qgD-MgJTviTGF7G1cPQnc0W_H_mejT_g/viewform-->
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="download" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal">
-                    </div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Download</h2>
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <ol class="text-left">
-                                       <!-- ●	Guideline <a href="#" target="_blank"  rel="noopener" >download here!</a><br>-->
-                                        ●	Poster <a href="https://drive.google.com/file/d/1x-ym52hrZCAWPjvVsQeMI7TYQKxyZqcg/view?usp=drivesdk">download here!</a><br>
-                                        <!-- ●	Instagram Feed <a href="#">download here!</a><br> -->
-                                        ●	Twibbon <a href="https://twb.nz/issxumifest2022">download here!</a>
-                                    </ol>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="vlog" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Vlog</h2>
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <ol class="text-left">
-                                        <li>Language: Indonesian or English;</li>
-                                        <li>Type: Individual or in a Group;</li>
-                                        <li>Maximum duration: 10 minutes;</li>
-                                        <li>Theme (choose one):</li>
-                                        <p style="margin: 0px;">a. Indonesian Culture;</p>
-                                        <p style="margin: 0px;">b. Education in Indonesia;</p>
-                                        <p style="margin: 0px;">c. Indonesian Culinary;</p>
-                                        <p style="margin: 0px;">d. A Place in Indonesia;</p>
-                                        <p style="margin: 0px;">e. Indonesian Traditional Music;</p>
-                                        <p style="margin: 0px;">f. Indonesian Traditional Games;</p>
-                                        <li>Upload the Vlog on YouTube.</li>
-                                        <p style="margin: 0px;">a. YouTube Video Title: UMiFest 2022 - VLOG Competition</p>
-                                        <p style="margin: 0px;">b. YouTube Description: (Name, VLOG Title, University, Individual (if individual) or Group Name (if in a group), #ISSxUMiFest2022 #UMalang)</p>
-                                        <p style="margin: 0px;"><b>Example:</b> Bruno Mario, How I Get Along with Me, Universitas Negeri Malang, Individual or Group A, #ISSxUMiFest2022 #UMalang</p>
-                                        <li>Submit the link of the YouTube Vlog into Google Form (link);</li>
-                                        <li>Sharing the short version of the video in your other personal platforms is allowed by using the hashtags of #ISSxUMiFest2022 #UMalang</li>
-                                        <li>Scoring criteria: Content, Quality/Creativity, Originality, Likes and Viewers in YouTube, Duration.</li>
-                                    </ol>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="story" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Essay</h2>
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <ol class="text-left">
-                                        <li>Language: Indonesian or English;</li>
-                                        <li>Type: Individual;</li>
-                                        <li>Maximum words: 1000-2000 words;</li>
-                                        <li>Theme (choose one):</li>
-                                        <p style="margin: 0px;">a. Indonesian culture/your country culture;</p>
-                                        <p style="margin: 0px;">b. COVID-19;</p>
-                                        <p style="margin: 0px;">c. What Do You See in Indonesia?</p>
-                                        <li>Submit the document via Google Form (link);</li>
-                                        <li>File format: .doc/.docx (Microsoft Word);</li>
-                                        <li>Scoring criteria: Words, Content, Quality, Originality.</li>
-                                    </ol>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="igTv" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Speech (Indonesia/English)</h2>
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <ol class="text-left">
-                                        <li>Language: Indonesian or English;</li>
-                                        <li>Type: Individual;</li>
-                                        <li>Must be a ONE-TAKE shot video (no cut, no merge/combine video and sound);</li>
-                                        <li>Maximum duration: 5 minutes;</li>
-                                        <li>Theme: Culture and Education in Indonesia;</li>
-                                        <li>Upload the speech video on YouTube (personal account).</li>
-                                        <p style="margin: 0px;">
-                                            a. YouTube Video Title: UMiFest 2022 - Speech Competition
-                                        </p>
-                                        <p style="margin: 0px;">
-                                            b. YouTube Description: (Name, Speech Title, University, #ISSxUMiFest2022 #UMalang)
-                                        </p>
-                                        <p style="margin: 0px;">
-                                            <b>Example:</b> Bruno Mario, How I Get Along with Me, Universitas Negeri Malang #ISSxUMiFest2022 #UMalang
-                                        </p>
-                                        <li>Submit the link of the YouTube Speech video into Google Form (link);</li>
-                                        <li>Sharing the short version of the video in your other personal platforms is allowed by using the hashtags of #ISSxUMiFest2022 #UMalang;</li>
-                                        <li>Scoring criteria: Duration, Content, Fluency, Originality.</li>
-                                        
-                                    </ol>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="videoClip" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <h2 class="text-uppercase">Indonesian Song Video Clip</h2>
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fas fa-music fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <ol class="text-left">
-                                        <li>Must be an Indonesian song (the language is in Indonesian);</li>
-                                        <li>Genre: any genre (pop, campursari, dangdut, etc.);</li>
-                                        <li>Type: Individual or in a Group;</li>
-                                        <li>Participants can also use any instruments;</li>
-                                        <li>Duration: adjusting with the original song;</li>
-                                        <li>Upload the song cover video on YouTube:</li>
-                                        <p style="margin: 0px;">a. YouTube Video Title: UMiFest 2022 - Singing Competition</p>
-                                        <p style="margin: 0px;">b. YouTube Description: (Name, Song Title, University, Individual (if individual) or Group Name (if in a group), #ISSxUMiFest2022 #UMalang)</p>
-                                        <p style="margin: 0px;"><b>Example:</b> Ariana Maria, Bengawan Solo, Universitas Negeri Semarang, Individual or Group A #ISSxUMiFest2022 #UMalang</p>
-                                        <li>Submit the link of the YouTube Singing video into Google Form (link);</li>
-                                        <li>Sharing the short version of the video in your other personal platforms is allowed by using the hashtags of #ISSxUMiFest2022 #UMalang;</li>
-                                        <li>Scoring criteria: Creativity, Originality, Performance, Voice.</li>
-                                    
-                                    </ol>
-
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="news" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <h2 class="text-uppercase">News Reading</h2>
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fas fa-music fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <ol class="text-left">
-                                        <li>Language: Indonesian;</li>
-                                        <li>Type: Individual;</li>
-                                        <li> Must be a ONE-TAKE shot video (no cut, no merge/combine video and sound);</li>
-                                        <li>Maximum duration: 5 minutes;</li>
-                                        <li>Theme (choose one):</li>
-                                        <p style="margin: 0px;">a. Culture;</p>
-                                        <p style="margin: 0px;">b. COVID-19 Situation;</p>
-                                        <p style="margin: 0px;">c. Education;</p>
-                                        <li>News reading text is arranged by the committee. The text will be sent to the Liaison Officer (LO) of each university after all the online workshop sessions end;</li>
-                                        <li>Upload the news reading video on YouTube.</li>
-                                        <p style="margin: 0px;">a. YouTube Video Title: UM iFest 2022 - News Reading Competition</p>
-                                        <p style="margin: 0px;">b. YouTube Description: (Name, News Reading Text Title, University, #ISSxUMiFest2022 #UMalang)</p>
-                                        <p style="margin: 0px;"><b>Example:</b> Enola, Online Education during COVID-19, Universitas Negeri Malang #ISSxUMiFest2022 #UMalang</p>
-                                        <li>Submit the YouTube link into Google Form (link);</li>
-                                        <li>Sharing the short version of the video in your other personal platforms is ALLOWED by using the hashtags of #ISSxUMiFest2022 #UMalang</li>
-                                        <li>Scoring criteria: Fluency, Performance, Duration, Pronunciation;</li>
-                                        <li><a href="https://drive.google.com/file/d/1ThZu0MLlUFzrDz8BszEv2EW-rHdRGKFP/view?usp=sharing">Download the text here.</a></li>
-                                    </ol>
-
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+    </footer>
+</body>
 </html>

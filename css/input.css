@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'aos/dist/aos';
+
+html {
+    @apply scroll-smooth font-fest;
+}
+.active {
+    @apply text-yellow-500;
+}
+
+button {
+    @apply inline-block text-center align-middle select-none rounded-md transition-all px-4 py-2 outline-none duration-200;
+}
+button:active {
+    @apply scale-95;
+}
+button:focus {
+    @apply focus:ring-2 focus:ring-offset-2
+}
+button:disabled {
+    @apply disabled:cursor-not-allowed
+}
+
+button.button-primary {
+    @apply bg-fest-blue text-slate-700 shadow-fest-blue
+}
+button.button-primary:hover {
+    @apply hover:bg-fest-blue/80 hover:text-slate-900 hover:shadow-fest-blue/80
+}
+button.button-primary:focus {
+    @apply focus:bg-fest-blue/90 focus:ring-fest-blue/90;
+}
+button.button-primary:disabled {
+    @apply disabled:bg-fest-blue/80
+}
+
+button.button-iFest {
+    @apply bg-iFest text-slate-50 shadow-iFest
+}
+button.button-iFest:hover {
+    @apply hover:bg-iFest/80 hover:text-slate-200 hover:shadow-iFest/80
+}
+button.button-iFest:focus {
+    @apply focus:bg-iFest/90 focus:ring-iFest/90;
+}
+button.button-iFest:disabled {
+    @apply disabled:bg-iFest/80
+}
+
+button.button-secondary {
+    @apply bg-gray-800 text-slate-100 shadow-gray-600
+}
+button.button-secondary:hover {
+    @apply hover:bg-gray-600 hover:text-slate-100 hover:shadow-gray-600/80
+}
+button.button-secondary:focus {
+    @apply focus:bg-gray-800 focus:ring-gray-700
+}
+button.button-secondary:disabled {
+    @apply disabled:bg-gray-600/80
+}
+
+section > .containing {
+    @apply container px-8 md:px-8 lg:px-0;
+}
+
+.timeline:before {
+    @apply absolute top-0 bottom-8 left-20 lg:left-1/2 w-0.5 -ml-0.5 content-[''] bg-slate-300;
+}
+.timeline > li {
+    @apply relative min-h-[50px] mb-5 flex gap-x-4;
+}
