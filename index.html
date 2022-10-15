@@ -166,40 +166,52 @@
     <section id="prizes" class="py-20 bg-iFest text-slate-50 flex justify-center"
     x-data="{
         competitions: [{
-            name: 'Essay:',
+            name: 'Poster:',
             prizes: [{
                 position: '1st place',
-                award: '$150'
+                award: '$175'
             }, {
                 position: '2nd place',
-                award: '$100'
+                award: '$150'
             },{
                 position: '3rd place',
-                award: '$75'
+                award: '$100'
             },]
         }, {
-            name: 'Speech and News Reading:',
+            name: 'News Reading:',
             prizes: [{
                 position: '1st place',
-                award: '$150'
+                award: '$250'
             }, {
                 position: '2nd place',
-                award: '$100'
+                award: '$200'
             },{
                 position: '3rd place',
-                award: '$75'
+                award: '$150'
             },]
         }, {
-            name: 'Vlog and Music Video:',
+            name: 'Music Video:',
             prizes: [{
                 position: '1st place',
-                award: '$150'
+                award: '$250'
             }, {
                 position: '2nd place',
-                award: '$100'
+                award: '$200'
             },{
                 position: '3rd place',
-                award: '$75'
+                award: '$150'
+            },]
+        }, {
+            name: 'TikTok:',
+            prizes: [{
+                position: '1st place',
+                award: '$250'
+            }, {
+                position: '2nd place',
+                award: '$200'
+            },{
+                position: '3rd place',
+                award: '$150'
             },]
         },]
     }">
@@ -208,7 +220,7 @@
             <div class="flex justify-center my-8">
                 <img src="./assets/img/umifestwinner2.png" alt="Prize for winners" class="max-h-60" data-aos="zoom-in-down">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-xl">
                 <template x-for="competition in competitions">
                     <div>
                         <h3 class="font-semibold text-2xl" x-text="competition.name" data-aos="fade-up"></h3>
