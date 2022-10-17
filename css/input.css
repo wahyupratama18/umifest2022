@@ -63,7 +63,7 @@ button.button-secondary:disabled {
 }
 
 section > .containing {
-    @apply container px-8 md:px-8 lg:px-0;
+    @apply container px-8 md:px-6 lg:px-4 xl:px-4;
 }
 
 .timeline:before {

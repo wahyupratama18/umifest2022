@@ -1831,15 +1831,22 @@ section > .containing {
 
 @media (min-width: 768px) {
   section > .containing {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   section > .containing {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  section > .containing {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
