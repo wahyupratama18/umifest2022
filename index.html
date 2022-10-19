@@ -88,10 +88,10 @@
             today = new Date()
             return Date.UTC(today.getFullYear(), today.getMonth() + 1, today.getDate(), today.getHours())
         },
-        from: (year, month, date, hour) => {
+        from: (year, month, date, hour = 0) => {
             return $data.now() > Date.UTC(year, month, date, hour)
         },
-        until: (year, month, date, hour) => {
+        until: (year, month, date, hour = 0) => {
             return $data.now() < Date.UTC(year, month, date, hour)
         },
     }">
@@ -109,11 +109,11 @@
                 buttons: [
                     {
                         text: 'Workshop',
-                        open: until(2022, 11, 7, 17),
+                        open: until(2022, 11, 8),
                         href: 'https://bit.um.ac.id/workshopumifest22'
                     }, {
                         text: 'Competition',
-                        open: /*from(2022, 11, 14, 17) && until(2022, 11, 24, 17)*/ true,
+                        open: /*from(2022, 11, 15) && until(2022, 11, 25)*/ true,
                         href: 'https://bit.um.ac.id/competitionumifest22'
                     }, {
                         text: 'Competition Winner',
