@@ -82,7 +82,19 @@
         </div>
     </navbar>
 
-    <header id="home" class="bg-fest bg-cover bg-no-repeat flex justify-center">
+    <header id="home" class="bg-fest bg-cover bg-no-repeat flex justify-center"
+    x-data="{
+        now: () => {
+            today = new Date()
+            return Date.UTC(today.getFullYear(), today.getMonth() + 1, today.getDate(), today.getHours())
+        },
+        from: (year, month, date, hour) => {
+            return $data.now() > Date.UTC(year, month, date, hour)
+        },
+        until: (year, month, date, hour) => {
+            return $data.now() < Date.UTC(year, month, date, hour)
+        },
+    }">
         <div class="container grid grid-cols-1 py-20 gap-y-16">
             <div class="flex justify-center">
                 <div class="bg-white/50 rounded-full flex justify-center px-4 py-2" data-aos="fade-down">
@@ -97,16 +109,16 @@
                 buttons: [
                     {
                         text: 'Workshop',
-                        open: false,
-                        href: 'https://drive.google.com/file/d/1ff9buIhM4K0CdnlIcSwQFuxrFGAjNe4V/view?usp=sharing'
+                        open: until(2022, 11, 7, 17),
+                        href: 'https://bit.um.ac.id/workshopumifest22'
                     }, {
                         text: 'Competition',
-                        open: false,
-                        href: 'https://drive.google.com/file/d/1ff9buIhM4K0CdnlIcSwQFuxrFGAjNe4V/view?usp=sharing'
+                        open: /*from(2022, 11, 14, 17) && until(2022, 11, 24, 17)*/ true,
+                        href: 'https://bit.um.ac.id/competitionumifest22'
                     }, {
                         text: 'Competition Winner',
-                        open: true,
-                        href: 'https://drive.google.com/file/d/1ff9buIhM4K0CdnlIcSwQFuxrFGAjNe4V/view?usp=sharing'
+                        open: false,
+                        href: 'javascript:void(0)'
                     },
                 ]
             }">
