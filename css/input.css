@@ -67,7 +67,7 @@ section > .containing {
 }
 
 .timeline:before {
-    @apply absolute top-0 bottom-8 left-20 lg:left-1/2 w-0.5 -ml-0.5 content-[''] bg-slate-300;
+    @apply absolute top-0 bottom-8 left-12 lg:left-1/2 w-0.5 -ml-0.5 content-[''] bg-slate-300;
 }
 .timeline > li {
     @apply relative min-h-[50px] mb-5 flex gap-x-4;
