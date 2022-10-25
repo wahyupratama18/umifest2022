@@ -497,34 +497,45 @@
         }],
         workshops: [{
             name: 'Bahasa Indonesia',
-            image: './assets/img/Timeline/duet.jpg',
+            image: './assets/img/Timeline/blank.jpg',
             time: '10-11 November 2022 - (13:00 - 14:30 GMT +7)',
-            speech: 'MS. CANDRIKA',
-            position: 'EFL Lecturer at Bina Nusantara University and BIPA Instructor at State University of Malang'
+            isSpeech: true,
+            /*speech: 'MS. CANDRIKA',
+            position: 'EFL Lecturer at Bina Nusantara University and BIPA Instructor at State University of Malang'*/
         }, {
             name: 'Indonesian Coffee',
-            image: './assets/img/Timeline/ariady.jpg',
+            image: './assets/img/Timeline/blank.jpg',
             time: '10 November 2022 - (15:00 - 17:00 GMT +7)',
-            speech: 'MR. ARIADY & MR. ALIF',
-            position: 'Nusantara Coffee Connoisseur'
+            isSpeech: true,
+            /*speech: 'MR. ARIADY & MR. ALIF',
+            position: 'Nusantara Coffee Connoisseur'*/
         }, {
             name: 'Videography',
             image: './assets/img/Timeline/blank.jpg',
             time: '10 November 2022 - (15:00 - 17:00 GMT +7)',
-            speech: 'MS. URROFI',
-            position: 'Videographer'
+            isSpeech: true,
+            /*speech: 'MS. URROFI',
+            position: 'Videographer'*/
         }, {
             name: 'Indonesian Traditional Dance',
             image: './assets/img/Timeline/blank.jpg',
             time: '11 November 2022 - (15:00 - 17:00 GMT +7)',
-            speech: 'MS. IKA PRATIWI',
-            position: 'Professional Dancer & Traditional Dance Instructor'
+            isSpeech: true,
+            /*speech: 'MS. IKA PRATIWI',
+            position: 'Professional Dancer & Traditional Dance Instructor'*/
         }, {
             name: 'Indonesian Martial Arts',
             image: './assets/img/Timeline/blank.jpg',
             time: '11 November 2022 - (15:00 - 17:00 GMT +7)',
-            speech: 'MS. KURNIATI',
+            isSpeech: true,
+            speech: 'MS. KURNIATI KAY',
             position: 'Professional Martial Arts Instructor'
+        }, {
+            name: 'Presentation',
+            image: './assets/img/Timeline/blank.jpg',
+            time: '12 November 2022 - (13:00 - 15:00 GMT +7)',
+            isSpeech: false,
+            description: 'Presentation day and competition technical meeting'
         },]
     }">
         <div class="containing text-center">
@@ -551,7 +562,14 @@
                                 <h4 class="text-lg font-bold" x-text="workshop.name"></h4>
                                 <p class="mt-2" x-text="workshop.time"></p>
                                 <p class="mt-2">
-                                    <b x-text="workshop.speech"></b> - <span x-text="workshop.position"></span>
+                                    <template x-if="workshop.isSpeech">
+                                        <div>
+                                            <b x-text="workshop.speech"></b> - <span x-text="workshop.position"></span>
+                                        </div>
+                                    </template>
+                                    <template x-if="!workshop.isSpeech">
+                                        <span x-text="workshop.description"></span>
+                                    </template>
                                 </p>
                             </div>
                         </li>
