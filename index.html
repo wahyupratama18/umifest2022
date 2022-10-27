@@ -562,9 +562,13 @@
                                 <h4 class="text-lg font-bold" x-text="workshop.name"></h4>
                                 <p class="mt-2" x-text="workshop.time"></p>
                                 <p class="mt-2">
-                                    <template x-if="workshop.isSpeech">
+                                    <template x-if="workshop.isSpeech && (workshop.speech || workshop.position)">
                                         <div>
-                                            <b x-text="workshop.speech"></b> - <span x-text="workshop.position"></span>
+                                            <b x-text="workshop.speech"></b> 
+                                            <template x-if="workshop.speech && workshop.position">
+                                                <span>-</span>
+                                            </template>
+                                            <span x-text="workshop.position"></span>
                                         </div>
                                     </template>
                                     <template x-if="!workshop.isSpeech">
