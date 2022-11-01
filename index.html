@@ -92,7 +92,7 @@
             return $data.now() > Date.UTC(year, month, date, hour)
         },
         until: (year, month, date, hour = 0) => {
-            return $data.now() < Date.UTC(year, month, date, hour)
+            return $data.now() < Date.UTC(year, month, date + 1, hour)
         },
     }">
         <div class="container grid grid-cols-1 py-20 gap-y-16">
